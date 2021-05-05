@@ -41,7 +41,7 @@
     "apollo-fetch": "^0.7.0",
     "apollo-link": "^1.2.14",
     "apollo-link-ws": "^1.0.20",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "graphql": "14.0.2",
     "graphql-tag": "^2.10.3",
     "lodash.throttle": "^4.1.1",
