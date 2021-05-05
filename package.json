@@ -45,7 +45,7 @@
     "graphql": "14.0.2",
     "graphql-tag": "^2.10.3",
     "lodash.throttle": "^4.1.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "subscriptions-transport-ws": "^0.9.16",
     "ws": "^7.3.0"
   }
