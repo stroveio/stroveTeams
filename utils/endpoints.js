@@ -1,8 +1,8 @@
-const environment = process.env.STROVE_ENVIRONMENT;
+const environment = process.env.CODEALLY_ENVIRONMENT;
 
 let endpoint;
 let websocketEndpoint;
-let idleTimeout = process.env.STROVE_IDLE_TIMEOUT;
+let idleTimeout = process.env.CODEALLY_IDLE_TIMEOUT;
 
 if (environment === "local" || !environment) {
   idleTimeout = 5000;

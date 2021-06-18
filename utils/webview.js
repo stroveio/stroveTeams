@@ -5,7 +5,7 @@ const Sentry = require("@sentry/node");
 
 const { sendLog } = require("./debugger");
 
-const environment = process.env.STROVE_ENVIRONMENT;
+const environment = process.env.CODEALLY_ENVIRONMENT;
 
 Sentry.init({
   beforeSend(event) {
@@ -14,8 +14,7 @@ Sentry.init({
     }
     return null;
   },
-  dsn:
-    "https://8acd5bf9eafc402b8666e9d55186f620@o221478.ingest.sentry.io/5285294",
+  dsn: "https://8acd5bf9eafc402b8666e9d55186f620@o221478.ingest.sentry.io/5285294",
   maxValueLength: 1000,
   normalizeDepth: 10,
 });

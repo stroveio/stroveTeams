@@ -2,7 +2,7 @@
   "name": "stroveteams",
   "displayName": "stroveTeams",
   "description": "Teams support for Strove",
-  "version": "0.2.13",
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.39.2"
   },
@@ -19,7 +19,34 @@
     "*"
   ],
   "main": "./extension.js",
-  "contributes": {},
+  "contributes": {
+    "commands": [
+      {
+        "command": "activeUsers.refresh",
+        "title": "Refresh active users"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "terminal-sharing",
+          "title": "Terminal Sharing",
+          "icon": "terminal.svg"
+        }
+      ]
+    },
+    "views": {
+      "terminal-sharing": [{
+        "id": "sharingManagement",
+				"name": "Sharing Management",
+        "type": "webview"
+      },
+      {
+        "id": "activeUsers",
+				"name": "Active Users"
+      }]
+    }
+  },
   "scripts": {
     "lint": "eslint .",
     "pretest": "yarn run lint",

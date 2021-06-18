@@ -4,7 +4,7 @@ const { websocketLink } = require("./websocketLink");
 const { startIOTestMutation, setProjectDataMutation } = require("./queries");
 const { sendLog } = require("./debugger");
 
-const environment = process.env.STROVE_ENVIRONMENT;
+const environment = process.env.CODEALLY_ENVIRONMENT;
 
 Sentry.init({
   beforeSend(event) {
@@ -13,8 +13,7 @@ Sentry.init({
     }
     return null;
   },
-  dsn:
-    "https://8acd5bf9eafc402b8666e9d55186f620@o221478.ingest.sentry.io/5285294",
+  dsn: "https://8acd5bf9eafc402b8666e9d55186f620@o221478.ingest.sentry.io/5285294",
   maxValueLength: 1000,
   normalizeDepth: 10,
 });
@@ -22,7 +21,8 @@ Sentry.init({
 const startIOTestOperation = {
   query: startIOTestMutation,
   variables: {
-    projectId: process.env.STROVE_PROJECT_ID || "60702e7b231de583c1e3e883",
+    projectId:
+      process.env.CODEALLY_ORIGINAL_PROJECT_ID || "60702e7b231de583c1e3e883",
   },
 };
 
@@ -111,7 +111,7 @@ const sendIOTestOutput = async ({ outputs, language }) => {
     const setProjectData = {
       query: setProjectDataMutation,
       variables: {
-        id: process.env.STROVE_PROJECT_ID || "123abc",
+        id: process.env.CODEALLY_ORIGINAL_PROJECT_ID || "123abc",
         ioTestOutputs: [
           {
             language,

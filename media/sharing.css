@@ -1,0 +1,24 @@
+body {
+  background-color: transparent;
+}
+
+p {
+  margin: 10px 0;
+}
+
+hr {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.styled-select {
+  width: 100%;
+  margin: 10px 0;
+  min-height: 25px;
+}
+
+.styled-button {
+  display: block;
+  border: none;
+  margin: 0 auto;
+}

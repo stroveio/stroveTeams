@@ -10,7 +10,7 @@ const child_process = require("child_process");
 const { sendLog } = require("./debugger");
 const { createWebview, reloadWebview } = require("./webview");
 
-const environment = process.env.STROVE_ENVIRONMENT;
+const environment = process.env.CODEALLY_ENVIRONMENT;
 
 Sentry.init({
   beforeSend(event) {
@@ -19,8 +19,7 @@ Sentry.init({
     }
     return null;
   },
-  dsn:
-    "https://8acd5bf9eafc402b8666e9d55186f620@o221478.ingest.sentry.io/5285294",
+  dsn: "https://8acd5bf9eafc402b8666e9d55186f620@o221478.ingest.sentry.io/5285294",
   maxValueLength: 1000,
   normalizeDepth: 10,
 });
@@ -28,7 +27,7 @@ Sentry.init({
 const receiveTerminalOperation = {
   query: receiveAutomaticTestSubscription,
   variables: {
-    projectId: process.env.STROVE_PROJECT_ID || "123abc",
+    projectId: process.env.CODEALLY_ORIGINAL_PROJECT_ID || "123abc",
   },
 };
 
@@ -195,7 +194,7 @@ const sendOutput = async (output) => {
     const setProjectData = {
       query: setProjectDataMutation,
       variables: {
-        id: process.env.STROVE_PROJECT_ID || "123abc",
+        id: process.env.CODEALLY_ORIGINAL_PROJECT_ID || "123abc",
         testOutput: output,
       },
     };

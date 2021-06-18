@@ -9,8 +9,8 @@ const client = new SubscriptionClient(
   {
     reconnect: true,
     connectionParams: () => ({
-      authorization: process.env.STROVE_USER_TOKEN
-        ? `Bearer ${process.env.STROVE_USER_TOKEN}`
+      authorization: process.env.CODEALLY_USER_TOKEN
+        ? `Bearer ${process.env.CODEALLY_USER_TOKEN}`
         : "",
     }),
   },
